@@ -1,0 +1,21 @@
+<button 
+  class="btn btn-secondary btn-block mb-1"
+  (click)="onAdd()">
+    <span class="fa fa-plus text-white mr-2"></span>
+</button>
+
+<ul class="list-group pl-0">
+  <li class="list-group-item"
+    *ngFor="let expense of (expenseState | async).expenses; let i = index">
+    <app-expense 
+    [expense]="expense"
+    [index]="i" ></app-expense>
+  </li>
+  <li class="list-group-item">
+    <p class="float-right mb-0 font-weight-bold text-muted">Total:  -{{ summa }}$</p>
+  </li>
+</ul>
+
+
+
+
