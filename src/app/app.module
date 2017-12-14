@@ -1,0 +1,31 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { StoreModule } from '@ngrx/store';
+import { FormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
+import { ExpenseComponent } from './expense/expense.component';
+import { ExpenseListComponent } from './expense-list/expense-list.component';
+import { expenseReducer } from './expense/store/expense.reducers';
+import { ExpenseFormComponent } from './expense-form/expense-form.component';
+import { DonutComponent } from './donut/donut.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ExpenseComponent,
+    ExpenseListComponent,
+    ExpenseFormComponent,
+    DonutComponent
+  ],
+  imports: [
+    BrowserModule,
+    ChartsModule,
+    FormsModule,
+    StoreModule.forRoot({expense: expenseReducer})
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
