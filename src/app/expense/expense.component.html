@@ -1,0 +1,11 @@
+<a (click)="onStartEdit()"> 
+	<div class="d-flex justify-content-between">
+			<div>
+				<p class="p-2 mr-3 bg-{{ color }} d-inline-block mb-0 text-center rounded-circle round"><span class="{{ fa }} text-white"></span></p>
+				<p class="d-inline-block mb-0 text-muted"> {{expense.description}} </p>	
+			</div>
+			<div class="align-self-center text-muted">
+				<p class="mb-0 font-weight-bold">-{{expense.sum}}$</p>
+			</div>
+	</div>
+</a>
